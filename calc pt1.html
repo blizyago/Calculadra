@@ -1,21 +1,21 @@
 <html>
 	<head>
 		<script>
-			function dis(val)
+			function mostrar(val)
 			{
-				document.getElementById("result").value+=val
+				document.getElementById("resultado").value+=val
 			}
 	
-			function salve()
+			function resolver()
 			{
-				let x = document.getElementById("result").value
+				let x = document.getElementById("resultado").value
 				let y = eval(x)
-				document.getElementById("result").value = y
+				document.getElementById("resultado").value = y
 			}
 			
-			function clear ()
+			function limpar()
 			{
-				document.getElementById("result").value = ""
+				document.getElementById("resultado").value = ""
 			}
 	
 	
@@ -25,7 +25,9 @@
 			.title{
 			text-align:center;
 			color:#000000;
+			background-color:#FF00FF;
 			border: solid black;
+			width: 151px;
 			}
 			
 			input[type="button"]
@@ -33,6 +35,7 @@
 			 background-color:#778899;
 			 color: black;
 			 border: solid black;
+			 width: 100%
 			 }
 			
 			 input[type="text"]
@@ -44,12 +47,35 @@
 		</style>
 	</head>
 	<body>
-	
-	
-	
-	
-	
+		<div class=title>Calculadra</div>
+		<table border="1">
+			<tr>
+				<td colspan=4><input type="text" id="resultado"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="7" onclick="mostrar('7')"/></td>
+				<td><input type="button" value="8" onclick="mostrar('8')"/></td>
+				<td><input type="button" value="9" onclick="mostrar('9')"/></td>
+				<td><input type="button" value="/" onclick="mostrar('/')"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="4" onclick="mostrar('4')"/></td>
+				<td><input type="button" value="5" onclick="mostrar('5')"/></td>
+				<td><input type="button" value="6" onclick="mostrar('6')"/></td>
+				<td><input type="button" value="*" onclick="mostrar('*')"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="1" onclick="mostrar('1')"/></td>
+				<td><input type="button" value="2" onclick="mostrar('2')"/></td>
+				<td><input type="button" value="3" onclick="mostrar('3')"/></td>
+				<td><input type="button" value="-" onclick="mostrar('-')"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="c" onclick="limpar()")"/></td>
+				<td><input type="button" value="0" onclick="mostrar('0')"/></td>
+				<td><input type="button" value="=" onclick="resolver()"/></td>
+				<td><input type="button" value="+" onclick="mostrar('+')"/></td>
+			</tr>
+		</table>
 	</body>
-	
-	
 </html>
